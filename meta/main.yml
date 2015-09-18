@@ -1,7 +1,7 @@
 ---
 dependencies:
-- colstrom.fish
-- colstrom.silversearcher
+- role: colstrom.fish
+- role: colstrom.silversearcher
   silversearcher_emacs_integration: yes
 galaxy_info:
   author: "Chris Olstrom"
