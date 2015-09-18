@@ -8,8 +8,9 @@ galaxy_info:
   description: "Installs Chris Olstrom onto a system and makes it cozy for him."
   license: MIT
   platforms:
-    - name: Ubuntu
-      versions:
-      - precise
-      - trusty
-  categories: []
+  - name: Ubuntu
+    versions:
+    - precise
+    - trusty
+  categories:
+  - system
