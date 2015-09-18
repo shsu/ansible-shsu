@@ -8,7 +8,7 @@
     name: colstrom
     state: present
     group: users
-    groups: colstrom,sudo,staff,wheel
+    groups: colstrom,sudo,staff
     comment: "Chris Olstrom"
     uid: 3133700
     shell: /usr/bin/fish
