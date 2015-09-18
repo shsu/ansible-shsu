@@ -13,6 +13,6 @@
     dest: /home/colstrom/.dotfiles
 - sudo_user: colstrom
   shell: ./setup.sh
-    args:
-      chdir: /home/colstrom/.dotfiles
-      creates: /home/colstrom/.config/fish/config.fish
+  args:
+    chdir: /home/colstrom/.dotfiles
+    creates: /home/colstrom/.config/fish/config.fish
