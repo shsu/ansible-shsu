@@ -1,0 +1,22 @@
+---
+- group:
+    name: colstrom
+    state: present
+    gid: 3133000
+
+- user:
+    name: colstrom
+    state: present
+    group: users
+    groups: colstrom,sudo,staff,wheel
+    comment: "Chris Olstrom"
+    uid: 3133700
+    shell: /usr/bin/fish
+
+- authorized_key:
+    user: colstrom
+    state: present
+    key: "{{ lookup('file', item) }}"
+  with_items:
+  - ed25519.pub
+  - rsa.pub
