@@ -1,0 +1,18 @@
+---
+- apt:
+    state: latest
+    pkg: "{{ item }}"
+  with_items:
+  - byobu
+  - emacs24-nox
+  - git-core
+  - htop
+  - tmux
+- git:
+    repo: "https://github.com/colstrom/dotfiles.git"
+    dest: /home/colstrom/.dotfiles
+- sudo_user: colstrom
+  shell: ./setup.sh
+    args:
+      chdir: /home/colstrom/.dotfiles
+      creates: /home/colstrom/.config/fish/config.fish
