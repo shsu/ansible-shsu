@@ -20,3 +20,7 @@
   with_items:
   - ed25519.pub
   - rsa.pub
+
+- copy:
+    src: sudo.conf
+    dest: /etc/sudoers.d/colstrom
