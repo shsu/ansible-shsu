@@ -16,3 +16,9 @@
   args:
     chdir: /home/colstrom/.dotfiles
     creates: /home/colstrom/.config/fish/config.fish
+- file:
+    path: /home/colstrom
+    owner: colstrom
+    group: colstrom
+    recurse: yes
+
