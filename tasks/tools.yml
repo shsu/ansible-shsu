@@ -11,6 +11,7 @@
 - git:
     repo: "https://github.com/colstrom/dotfiles.git"
     dest: /home/colstrom/.dotfiles
+    force: yes
 - sudo_user: colstrom
   shell: ./setup.sh
   args:
