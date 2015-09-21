@@ -1,6 +1,7 @@
 ---
 dependencies:
 - role: colstrom.fish
+- role: colstrom.emacs-snapshot
 - role: colstrom.silversearcher
   silversearcher_emacs_integration: yes
 galaxy_info:
