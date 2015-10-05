@@ -4,7 +4,6 @@
     pkg: "{{ item }}"
   with_items:
   - byobu
-  - emacs24-nox
   - git-core
   - htop
   - tmux
