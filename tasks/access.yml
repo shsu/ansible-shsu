@@ -1,26 +1,25 @@
 ---
 - group:
-    name: colstrom
+    name: "{{ username }}"
     state: present
     gid: 3133000
 
 - user:
-    name: colstrom
+    name: "{{ username }}"
     state: present
     group: users
-    groups: colstrom,sudo,staff
-    comment: "Chris Olstrom"
+    groups: "{{ username }},sudo,staff"
     uid: 3133700
     shell: /usr/bin/fish
 
 - authorized_key:
-    user: colstrom
+    user: "{{ username }}"
     state: present
     key: "{{ lookup('file', item) }}"
   with_items:
   - ed25519.pub
   - rsa.pub
 
-- copy:
-    src: sudo.conf
-    dest: /etc/sudoers.d/colstrom
+- template:
+    src: sudo.conf.j2
+    dest: "/etc/sudoers.d/{{ username }}"
