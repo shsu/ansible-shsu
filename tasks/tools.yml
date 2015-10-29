@@ -9,16 +9,16 @@
   - tmux
 - git:
     repo: "https://github.com/colstrom/dotfiles.git"
-    dest: /home/colstrom/.dotfiles
+    dest: "/home/{{ username }}/.dotfiles"
     force: yes
-- sudo_user: colstrom
+- sudo_user: "{{ username }}"
   shell: ./setup.sh
   args:
-    chdir: /home/colstrom/.dotfiles
-    creates: /home/colstrom/.config/fish/config.fish
+    chdir: "/home/{{ username }}/.dotfiles"
+    creates: "/home/{{ username }}/.config/fish/config.fish"
 - file:
-    path: /home/colstrom
-    owner: colstrom
-    group: colstrom
+    path: "/home/{{ username }}"
+    owner: "{{ username }}"
+    group: "{{ username }}"
     recurse: yes
 
