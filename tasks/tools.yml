@@ -6,18 +6,8 @@
   - htop
   - unzip
   - zip
-- git:
-    repo: "https://github.com/colstrom/dotfiles.git"
-    dest: "/home/{{ username }}/.dotfiles"
-    force: yes
-- sudo_user: "{{ username }}"
-  shell: ./setup.sh
-  args:
-    chdir: "/home/{{ username }}/.dotfiles"
-    creates: "/home/{{ username }}/.config/fish/config.fish"
 - file:
     path: "/home/{{ username }}"
     owner: "{{ username }}"
     group: "{{ username }}"
     recurse: yes
-
