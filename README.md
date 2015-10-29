@@ -1,20 +1,22 @@
-# ansible-colstrom
+# ansible-shsu
 
-Installs Chris Olstrom onto a system and makes it cozy for him.
+Installs Steven Hsu onto a system and makes it cozy for him.
 
-Tunables
---------
-* None
+## Tunables
+* `username`
 
-Dependencies
-------------
+## Dependencies
 * [colstrom.fish](https://github.com/colstrom/ansible-fish/)
-* [colstrom.silversearcher](https://github.com/colstrom/ansible-silversearcher/)
 
-License
--------
+## Example Playbook
+    - hosts: servers
+      roles:
+         - role: colstrom.fish
+         - role: shsu.shsu
+
+## License
 [MIT](https://tldrlegal.com/license/mit-license)
 
-Contributors
-------------
+## Contributors
 * [Chris Olstrom](https://colstrom.github.io/) | [e-mail](mailto:chris@olstrom.com) | [Twitter](https://twitter.com/ChrisOlstrom)
+* [Steven Hsu](https://www.stevenhsu.ca)

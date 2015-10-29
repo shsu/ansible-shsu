@@ -3,10 +3,9 @@
     state: latest
     pkg: "{{ item }}"
   with_items:
-  - byobu
-  - git-core
   - htop
-  - tmux
+  - unzip
+  - zip
 - git:
     repo: "https://github.com/colstrom/dotfiles.git"
     dest: "/home/{{ username }}/.dotfiles"
