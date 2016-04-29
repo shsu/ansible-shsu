@@ -11,3 +11,7 @@
     owner: "{{ username }}"
     group: "{{ username }}"
     recurse: yes
+
+- copy:
+    src: .gitconfig
+    dest: "/home/{{ username }}/.gitconfig"

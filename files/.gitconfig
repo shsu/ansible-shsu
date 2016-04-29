@@ -1,0 +1,11 @@
+[user]
+  email = admin@stevenhsu.ca
+  name = Steven Hsu
+[alias]
+  co = checkout
+  br =alias branch
+  ci = commit
+  st = status
+[push]
+  default = simple
+
